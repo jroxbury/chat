@@ -4,9 +4,18 @@ var http = require("http"),
 	express = require("express");
 
 const app = express();
+app.set("view engine", "jade");
 
-app.get("/", (request, response) => {
-	response.end("Hello World!");
+app.use(express.static("./public"));
+
+app.use( (request,response,next) => {
+	console.log("IN");
+	next();
+	console.log("OUT");
+});
+
+app.get("/", (request,response) => {
+	response.render("index", {title: "TITLE!"});
 });
 
 const server = new http.Server(app);
