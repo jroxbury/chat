@@ -3,5 +3,12 @@ html
 		title=title
 		link(rel="stylesheet", href="/style.css")
 	body
+		h1 Hello, Chatty!
 		.site-wrap
-			h1 Hello, World!
+			.chat-list
+				ul
+			.chat-form
+				input(type="text", placeholder="chat away!")
+			
+	script(src="/socket.io/socket.io.js")
+	script(src="application.js")

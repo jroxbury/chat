@@ -1,4 +1,46 @@
 body {
 	background:firebrick;
 	color:white;
+	display:flex;
+	font-family:arial,Helvetica,san-serif;
+}
+h1{
+	display:block;
+	text-align:center;
+}
+.site-wrap {
+	width:400px;
+	height:400px;
+	margin:auto;
+	border:5px solid steelblue;
+	background:#fff;
+	display: flex;
+	flex-direction:column;
+}
+.chat-list {
+	flex-grow:1;
+	display:flex;
+	font-size:10pt;
+}
+
+ul {
+	flex-grow:1;
+	list-style: none;
+	margin:0;
+	padding:0;
+	overflow-y: scroll;
+}
+li {
+	border-bottom:1px solid steelblue;
+	margin:0;
+	padding:5px;
+	color:black;
+}
+.chat-form {
+	border-top: 5px solid steelblue;
+}
+input {
+	width:100%;
+	padding:5px;
+	box-sizing:border-box;
 }
